@@ -33,6 +33,12 @@ ruby '2.3.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'bootstrap-sass'
+  gem 'font-awesome-sass'
+  gem 'simple_form'
+  gem 'autoprefixer-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
