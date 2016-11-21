@@ -93,3 +93,4 @@ ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
 
 
 cocktails.each { |cocktail| Cocktail.create(cocktail) }
+

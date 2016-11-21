@@ -3,12 +3,16 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <h1><%= @cocktail.name %></h1>
       <%= link_to 'Back', cocktails_path %>
+      <% if @cocktail.picture? %>
+        <%= cl_image_tag @cocktail.picture.path, width: 200, height: 300, crop: :fill %>
+      <% end %>
       <h2>Recipe:</h2>
       <ul>
         <% @cocktail.doses.each do |dose| %>
           <li><%= dose.description %> of <%= dose.ingredient.name %> <%= link_to "Delete this dose", dose_path(dose), method: :delete  %></li>
         <% end %>
       </ul>
+      <%= image_tag @cocktail.picture  %>
     </div>
   </div>
 </div>
